@@ -1,0 +1,142 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 25, 2015, 7:39:31 PM
+    Author     : Mike-MSI
+*/
+
+/* ********************** general *************************** */
+.darkBg {
+    -fx-background-color: #111111;
+}
+.lightBg {
+    -fx-background-color: #eeeeee;
+}
+
+.fs14 {
+    -fx-font-size: 14px;
+}
+.fs18 {
+    -fx-font-size: 18px;
+}
+.fs24 {
+    -fx-font-size: 24px;
+}
+
+.error {
+    -fx-effect: dropshadow(three-pass-box, darkred, 7, 0, 0, 0);
+}
+
+.warning {
+    -fx-effect: dropshadow(three-pass-box, gold, 14, 0, 0, 0);
+}
+
+.darkRedText {
+    -fx-text-fill: darkred;
+}
+
+.wizardPane {
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-tab-max-height: 0 ;
+}
+.wizardPane .tab-header-area {
+    visibility: hidden ;
+}
+
+.lightInfoLabel{
+    -fx-text-fill: #777;
+}
+
+.labelGlyph:hover {
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, white, 10, 0.1, 0, 0);
+}
+
+
+/********************** LOGIN SCREEN **************************/
+#loginBackground {
+    -fx-background-color: #ddd;
+}
+
+.loginField {
+    -fx-font-size: 18px;
+}
+
+
+/************************ MAIN SCREEN **************************/
+#searchBarBg {
+    -fx-background-color: 
+        -fx-shadow-highlight-color, 
+        -fx-outer-border, 
+        -fx-inner-border, 
+        -fx-body-color;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-background-radius: 3px, 3px, 2px, 1px;
+}
+#tfSearchMember {
+    -fx-font-size: 18px;
+}
+
+#mainSidebar {
+    -fx-background-color: #eeeeee;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10,0,5,0);
+}
+
+.sidebarButton:hover {
+    -fx-cursor: hand;
+    -fx-background-color: #009999;
+}
+
+#btnCheckin {
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#66f885, #00cc33),
+        linear-gradient(#009900, #006633),
+        linear-gradient(#009900, #006633);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+#btnCheckin Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+
+#btnReset {
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#ff9999, #ff6666),
+        linear-gradient(#ff3333, #cc0000),
+        linear-gradient(#ff3333, #cc0000);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 12 30 12 30;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+#btnReset Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+
+
+
+/* -------- MemberOverview ------------- */
+#memberPicture {
+    
+}
+#memberId {
+    -fx-font-size: 16px;
+}
+#memberName{
+    -fx-font-size: 24px;
+    -fx-font-weigt: bold;
+}
+
+
+

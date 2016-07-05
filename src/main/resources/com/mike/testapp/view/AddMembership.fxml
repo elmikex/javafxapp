@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="500.0" stylesheets="@../../../../styles/styles.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mike.testapp.AddMembershipController">
+   <children>
+      <VBox prefHeight="70.0" prefWidth="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Add Membership">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Follow the instructions to add a new membership to the member" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <TabPane fx:id="tpWizard" layoutX="42.0" layoutY="76.0" prefHeight="380.0" prefWidth="458.0" styleClass="wizardPane" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+        <tabs>
+          <Tab fx:id="tSelect" text="Select Membership">
+               <content>
+                  <VBox alignment="CENTER" fillWidth="false" prefHeight="212.0" prefWidth="500.0" spacing="10.0">
+                     <children>
+                        <Label styleClass="fs18" text="Select a membership from the list below" />
+                        <ListView fx:id="lvMemberships" prefHeight="135.0" prefWidth="327.0" />
+                        <TextArea fx:id="taMembershipDetails" prefHeight="160.0" prefWidth="327.0" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+          </Tab>
+          <Tab fx:id="tBegin" text="Begin Date">
+               <content>
+                  <VBox alignment="CENTER" fillWidth="false" spacing="10.0">
+                     <children>
+                        <Label styleClass="fs18" text="When does this membership begins?" />
+                        <DatePicker fx:id="dpBeginDate" prefHeight="50.0" prefWidth="250.0" promptText="Enter a date" styleClass="fs24" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+          </Tab>
+            <Tab fx:id="tEnd" text="End Date">
+               <content>
+                  <VBox alignment="CENTER" fillWidth="false" spacing="10.0">
+                     <children>
+                        <Label styleClass="fs18" text="When does this membership ends?" />
+                        <DatePicker fx:id="dpEndDate" editable="false" prefHeight="50.0" prefWidth="250.0" promptText="Enter a date" styleClass="fs24" />
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <HBox alignment="CENTER" layoutY="430.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefWidth="250.0" spacing="10.0">
+               <children>
+                  <Button fx:id="btnCancel" cancelButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Cancel" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefWidth="250.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <Button fx:id="btnPrevious" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Previous">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnNext" defaultButton="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="100.0" text="Next">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

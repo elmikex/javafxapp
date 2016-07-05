@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="TestApp.jnlp">
+  <information>
+    <title>TestApp</title>
+    <vendor>Mike-MSI</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="TestApp.jar" size="237116" download="eager" />
+    <jar href="lib\antlr-2.7.7.jar" size="445288" download="eager" />
+    <jar href="lib\controlsfx-8.40.10.jar" size="954085" download="eager" />
+    <jar href="lib\dom4j-1.6.1.jar" size="313898" download="eager" />
+    <jar href="lib\fontawesomefx-8.9.jar" size="571068" download="eager" />
+    <jar href="lib\hibernate-commons-annotations-5.0.1.Final.jar" size="75288" download="eager" />
+    <jar href="lib\hibernate-core-5.0.6.Final.jar" size="5577087" download="eager" />
+    <jar href="lib\hibernate-jpa-2.1-api-1.0.0.Final.jar" size="113371" download="eager" />
+    <jar href="lib\jandex-2.0.0.Final.jar" size="187752" download="eager" />
+    <jar href="lib\javassist-3.18.1-GA.jar" size="714194" download="eager" />
+    <jar href="lib\jboss-logging-3.3.0.Final.jar" size="66802" download="eager" />
+    <jar href="lib\jta-1.1.jar" size="15071" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.38.jar" size="983911" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="TestApp" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="com.mike.testapp.MainApp"  name="TestApp" />
+  <update check="always"/>
+</jnlp>

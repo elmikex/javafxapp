@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mike.testapp.NewMembershipController">
+    <children>
+        <StackPane prefHeight="452.0" prefWidth="878.0">
+            <children>
+                <GridPane fx:id="gpMembershipForm" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="439.0" prefWidth="929.0">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="225.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="245.0" minWidth="7.0" prefWidth="18.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="633.0" minWidth="10.0" prefWidth="614.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="57.0" minHeight="10.0" prefHeight="44.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="82.0" minHeight="10.0" prefHeight="81.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <TextField fx:id="tfName" prefHeight="40.0" prefWidth="480.0" styleClass="fs18" GridPane.columnIndex="2" />
+                        <Label text="Membership name" />
+                        <Label text="Membership lenght" GridPane.rowIndex="1" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                            <children>
+                                <Slider fx:id="sliCycleAmount" blockIncrement="1.0" majorTickUnit="10.0" min="1.0" minorTickCount="9" prefHeight="24.0" prefWidth="300.0" showTickMarks="true" snapToTicks="true" value="1.0">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Slider>
+                                <Label fx:id="lbCycleAmount" styleClass="fs18" text="1">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                        <ComboBox fx:id="cbxCycle" prefWidth="150.0" promptText="Select a cycle...">
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </ComboBox>
+                            </children>
+                        </HBox>
+                        <Label text="Restrict visits per day" GridPane.rowIndex="3" />
+                        <HBox fx:id="hbVisits" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                            <children>
+                                <Slider fx:id="sliVisitsAllowed" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" prefWidth="140.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" top="25.0" />
+                                    </HBox.margin>
+                                </Slider>
+                            </children>
+                        </HBox>
+                        <Label text="Restrict to certain days only" GridPane.rowIndex="4" />
+                        <Label text="Restrict times of entry" GridPane.rowIndex="5" />
+                        <Label text="Membership cost" GridPane.rowIndex="2" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                            <children>
+                                <Label styleClass="fs24" text="\$">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <TextField fx:id="tfPrice" prefHeight="40.0" prefWidth="193.0" styleClass="fs18">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </TextField>
+                                <CheckBox fx:id="cbChargeTax" mnemonicParsing="false" text="Charge sales tax">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </CheckBox>
+                            </children>
+                        </HBox>
+                        <Label text="This is a promotional membership" GridPane.rowIndex="6" />
+                        <HBox fx:id="hbDays" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <HBox fx:id="hbTimes" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                            <children>
+                                <ListView fx:id="lvTimesAllowed" prefHeight="63.0" prefWidth="110.0">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </ListView>
+                                <Button fx:id="btnRemoveTime" mnemonicParsing="false" onAction="#removeTimeRestriction">
+                                    <HBox.margin>
+                                        <Insets right="10.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <VBox alignment="CENTER" prefHeight="63.0" prefWidth="460.0">
+                                    <children>
+                                        <HBox fx:id="hbContainer2" alignment="CENTER" prefHeight="41.0" prefWidth="459.0" />
+                                        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="459.0">
+                                            <children>
+                                                <Label text="From">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" right="5.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label fx:id="lbFromTime" text="lbFromTime">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" right="5.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="to">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" right="5.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label fx:id="lbToTime" text="lbFromTime">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" right="5.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Button fx:id="btnAddTime" mnemonicParsing="false" onAction="#addTimeRestriction" text="Add">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" right="5.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <HBox fx:id="hbExpire" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                            <children>
+                                <Label text="Expire date:">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <DatePicker fx:id="dpExpireDate" prefHeight="40.0" prefWidth="174.0">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="5.0" />
+                                    </HBox.margin>
+                                </DatePicker>
+                            </children>
+                        </HBox>
+                        <CheckBox fx:id="cbVisitsRestriction" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <CheckBox fx:id="cbDaysRestriction" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <CheckBox fx:id="cbTimesRestriction" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <CheckBox fx:id="cbExpire" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                    </children>
+                </GridPane>
+            </children>
+        </StackPane>
+        <GridPane fx:id="gpActions" prefHeight="89.0" prefWidth="978.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" />
+            </columnConstraints>
+            <rowConstraints>
+            <RowConstraints maxHeight="27.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="38.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button fx:id="btnSave" mnemonicParsing="false" onAction="#handleSave" prefHeight="25.0" prefWidth="173.0" text="Save" GridPane.rowIndex="1" />
+                <Button fx:id="btnGoBack" mnemonicParsing="false" onAction="#handleGoBack" text="Cancel" GridPane.rowIndex="2" />
+            <Label fx:id="lbInvalidForm" text="Please properly fill all the required fields" textFill="RED" visible="false" />
+            </children>
+        </GridPane>
+    </children>
+</VBox>

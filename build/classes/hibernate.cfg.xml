@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://db4free.net:3306/miketestdb</property>
+    <property name="hibernate.connection.username">mike</property>
+    <property name="hibernate.connection.password">mike12345</property>
+    
+
+    <mapping class="com.mike.testapp.model.User"/>
+    <mapping class="com.mike.testapp.model.Member"/>
+    <mapping class="com.mike.testapp.model.Employee"/>
+    <mapping class="com.mike.testapp.model.Membership"/>
+    <mapping class="com.mike.testapp.model.MemberMembership"/>
+    <mapping class="com.mike.testapp.model.Checkin"/>
+  </session-factory>
+</hibernate-configuration>
